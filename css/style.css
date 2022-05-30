@@ -1,6 +1,8 @@
+/* Formateador de inicio */
 * {
     margin: 0;
     padding: 0;
+    gap: 10px;
     color: #f4f4f8;
     background-color: #4e4e4e;
     list-style-type: none;
@@ -9,59 +11,109 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
+  
+/* Formato de la NavBar - Menu de inicio */
 .contenedor > nav > ul {
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    background-color: #4e4e4e;
-    justify-content: space-around;
-}
-img {
-    width: 40px;
-}
-
-.interactable {
-    cursor: pointer;
-    transition: all ease-out 250ms;
-  }
-  
-.interactable:hover {
     padding: 10px;
-    border-bottom: 3px solid #3245f0;
+    justify-content: space-around;
+  }
+  .interactable {
+      cursor: pointer;
+      transition: all ease-out 200ms;
+    }
+  .interactable:hover {
+      padding: 5px;
+      border-bottom: 2px solid #3245f0;
+    }
+
+/* Formato de la pagina inicio */
+.grilla > .content > .inicio {
+  height: 90vh;
+    background-image: url(/img/paisaje_fondo.jpg);
+    opacity: 0.5;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(142, 156, 114);
   }
 
-.inicio{
-    display: flex;
-    height: 93vh;
-    background-image: url(/img/paisaje_fondo.jpg);
-    opacity: 0.3;
-  }
+/* Formato de la pagina Certificados */
 .certificados{
-    display: flex;
-    flex-wrap: wrap;
     height: 100vh;
-    width: 50vw;
-    background-image: url(/img/react_logo.png);
+    background-color: rgb(194, 166, 130);
+    justify-content: center;
+    align-items: center;
+    animation-name: colorchange;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
     
-    opacity: 0.3;
   }
+  @keyframes colorchange {
+    0% {background-color:#16254d ;}
+    25% {background-color:#1f2b4b ;}
+    50% {background-color: #373b44;}
+    75% {background-color: #1f2b4b;}
+    100% {background-color: #16254d;}
+}
+
+/* Formato de la pagina Redes */
+
 .redes{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 100vh;
-    width: 50vw;
-    background-image: url(/img/redes-sociales.png);
-    opacity: 0.5;
-  }
-  .redes_link{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    width: 50vw;
+    height: 95vh;
     background-image: url(/img/redes-sociales.png);
+    justify-content: center;
+    align-items: center;
     background: #f5f4f4;
-    opacity: 0.5;
+    
+  }
+   
+/* Formato de la pagina Contacto (Footer) */
+  
+
+
+/* Grilla responsive */
+  .grilla {
+    display: grid;
+    
+    /* grid-template: repeat(4, minmax(10px, 1fr)) / repeat(12, minmax(10px, 1fr)); */
+    grid-template-areas:
+      "h h h h h h h h h h h h"
+      "c c c c c c c c c c c c"
+      "c c c c c c c c c c c c"
+      "f f f f f f f f f f f f";
+  }
+  
+  .grilla > div {
+    /* border: 4px solid #333;
+    padding: 20px; */
+    text-align: center;
+  }
+  
+  .header {
+    grid-area: h;
+    height: 10vh;
+  }
+  .content {
+    grid-area: c;
+    
+  }
+  .footer {
+    grid-area: f;
+    height: 5vh;
+  }
+  @media only screen and (max-width: 900px) {
+    .grilla {
+      grid-template: repeat(auto-fit, minmax(10px, 1fr)) / 1fr;
+      grid-template-areas:
+        "h"
+        "c"
+        "f";
+    }
+    .grilla > .content > .sec_inicio {
+      width: 350px;
+    }
   }
