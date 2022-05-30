@@ -31,7 +31,7 @@
 
 /* Formato de la pagina inicio */
 .grilla > .content > .inicio {
-  height: 90vh;
+    height: 90vh;
     background-image: url(/img/paisaje_fondo.jpg);
     opacity: 0.5;
     justify-content: center;
@@ -49,6 +49,23 @@
     animation-duration: 7s;
     animation-iteration-count: infinite;
     
+    text-align: center;
+  }
+  .certificados > ul > li > img{
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    
+  }
+  .certificados > ul > li {
+
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-content: center;
   }
   @keyframes colorchange {
     0% {background-color:#16254d ;}
@@ -60,18 +77,19 @@
 
 /* Formato de la pagina Redes */
 
-.redes{
-    display: flex;
-    flex-direction: row;
+.redes ul {
     height: 95vh;
-    background-image: url(/img/redes-sociales.png);
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #232b3b;
+    align-content: center;
+    justify-content:space-evenly;
     align-items: center;
-    background: #f5f4f4;
-    gap: 10;
+    text-align: center;
     
   }
-   
+  
 /* Formato de la pagina Contacto (Footer) */
   
 
@@ -104,6 +122,8 @@
   .footer {
     grid-area: f;
     height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
   }
   @media only screen and (max-width: 900px) {
     .grilla {
