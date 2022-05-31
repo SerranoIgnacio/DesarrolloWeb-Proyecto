@@ -32,24 +32,37 @@
 /* Formato de la pagina inicio */
 .grilla > .content > .inicio {
     height: 90vh;
-    background-image: url(/img/paisaje_fondo.jpg);
     opacity: 0.5;
+    background-image: url(/img/paisaje_fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment:fixed;
+    
+  }
+.grilla > .content > .inicio > ul {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
-    background-color: rgb(142, 156, 114);
+    align-content: center;
+    text-align: center;
+    background: transparent;
+    background: transparent;
+  }
+  .grilla > .content > .inicio > ul > li > img{
+    border-radius: 50%;
+    height: 200px;
   }
 
 /* Formato de la pagina Certificados */
 .certificados{
     height: 100vh;
-    background-color: rgb(194, 166, 130);
     justify-content: center;
     align-items: center;
-    animation-name: colorchange;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    
     text-align: center;
+    padding: 20px;
+
   }
   .certificados > ul > li > img{
     width: 400px;
@@ -60,20 +73,16 @@
     align-content: center;
     
   }
-  .certificados > ul > li {
-
+  .certificados > ul {
+    background: none;
     display: flex;
     flex-wrap:wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
+    justify-content: space-around;
+    margin-top: 200px;
   }
-  @keyframes colorchange {
-    0% {background-color:#16254d ;}
-    25% {background-color:#1f2b4b ;}
-    50% {background-color: #373b44;}
-    75% {background-color: #1f2b4b;}
-    100% {background-color: #16254d;}
-}
+  
 
 /* Formato de la pagina Redes */
 
@@ -87,12 +96,32 @@
     justify-content:space-evenly;
     align-items: center;
     text-align: center;
+    position: relative;
+    
+    animation-name: colorchange;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes colorchange {
+    0% {background-color:#16254d ;}
+    25% {background-color:#1f2b4b ;}
+    50% {background-color: #373b44;}
+    75% {background-color: #1f2b4b;}
+    100% {background-color: #16254d;}
+}
+/* Formato de la pagina Contacto */
+.contacto {
+    height: 70vh;
+    background-image: url(/img/header.png);
+    background-size: auto;
     
   }
-  
-/* Formato de la pagina Contacto (Footer) */
-  
-
+.contacto > div {
+      display: flex;
+      margin-left: 100px;
+      margin-top: 100px;
+      background: transparent;
+}
 
 /* Grilla responsive */
   .grilla {
@@ -122,8 +151,7 @@
   .footer {
     grid-area: f;
     height: 5vh;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 10px;
   }
   @media only screen and (max-width: 900px) {
     .grilla {
@@ -133,7 +161,17 @@
         "c"
         "f";
     }
-    .grilla > .content > .inicio {
+    .grilla > .content {
       background-size: auto;
+    }
+    .certificados > ul {
+      display: flex;
+      flex-wrap:wrap;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
     }
   }
