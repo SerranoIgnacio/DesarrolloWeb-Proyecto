@@ -1,5 +1,5 @@
 ![Inove banner](/header.png)
-Ignacio Serrano Desarrollador\
+Ignacio Serrano - Desarrollador Full Stack\
 nachose44@gmail.com\
 Web: [Nacho](http://ignacioserrano.com.ar)
 
