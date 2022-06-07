@@ -1,4 +1,4 @@
-![Iserrano banner](../img/header.png)
+![Iserrano banner](/img/header.png)
 Ignacio Serrano - Desarrollador Full Stack\
 nachose44@gmail.com\
 Web: [Nacho](http://ignacioserrano.com.ar)
